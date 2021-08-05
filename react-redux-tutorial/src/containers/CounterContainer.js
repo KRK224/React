@@ -10,26 +10,34 @@ const CounterContainer = ({number, increase, decrease})=>{
   );
 };
 
-const mapStateToProps = state =>{
-  return(
-    {number: state.counter.number,
-  });
-};
+// const mapStateToProps = state =>{
+//   return(
+//     {number: state.counter.number,
+//   });
+// };
 
-const mapdispatchToProps = dispatch => ({
-  
-  increase: ()=>{
-    dispatch(increase());
-  },
-
-  decrease: ()=>{
-    dispatch(decrease());
-  },
-});
+// const mapdispatchToProps = dispatch => {
+//   return(
+//   bindActionCreators (
+//     {
+//       increase,
+//       decrease,
+//     },
+//     dispatch,
+//   ))
+// };
 
 
 
 export default connect(
-  mapStateToProps,
-  mapdispatchToProps
+  // mapStateToProps,
+  // mapdispatchToProps
+  state=>({
+    number: state.counter.number,
+  }),
+  {
+    increase,
+    decrease,
+  },
+
 )(CounterContainer);
