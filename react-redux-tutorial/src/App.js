@@ -1,7 +1,8 @@
 import React from 'react';
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
 import Todos from './components/Todos';
 import CounterContainer from './containers/CounterContainer';
+import TodosContainer from './containers/TodosContainer';
 
 
 const App = ()=>{
@@ -9,7 +10,7 @@ const App = ()=>{
     <div>
       <CounterContainer></CounterContainer>
       <hr />
-      <Todos></Todos>
+      <TodosContainer></TodosContainer>
     </div>
   )
 }
