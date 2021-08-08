@@ -6,9 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 
 import rootReducer from "./modules";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
+// import loggerMiddleware from "./lib/loggerMiddleware";
+import {createLogger} from 'redux-logger';
 
-const store = createStore(rootReducer);
+const logger = createLogger();
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 ReactDOM.render(
   <React.StrictMode>
