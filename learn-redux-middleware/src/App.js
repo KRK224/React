@@ -1,9 +1,11 @@
 import React from 'react'
-import CounterContainer from './containers/CounterContainer'
+// import CounterContainer from './containers/CounterContainer'
+import SampleContainers from './containers/SampleContainers'
+
 const App=()=>{
   return(
     <div>
-      <CounterContainer />
+      <SampleContainers />
     </div>
   )
 }
